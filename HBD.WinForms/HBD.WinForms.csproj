@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B8AADA2-3335-49DD-A201-64070AEF75CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HBD.WinForms</RootNamespace>
+    <AssemblyName>HBD.WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=0.0.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.1\lib\net45\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="HBD.Data.Comparisons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HBD.Data.Comparisions.1.0.1\lib\net461\HBD.Data.Comparisons.dll</HintPath>
+    </Reference>
+    <Reference Include="HBD.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HBD.Framework.1.0.12\lib\net460\HBD.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="HBD.Framework.Data.Excel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HBD.Framework.Data.Excel.1.0.1\lib\net461\HBD.Framework.Data.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="HBD.QueryBuilders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HBD.QueryBuilders.1.0.2\lib\net461\HBD.QueryBuilders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.TransactSql.ScriptDom.14.0.3660.1\lib\net40\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ControlTitleAttribute.cs" />
+    <Compile Include="Attributes\NotAllowValidationAttribute.cs" />
+    <Compile Include="Attributes\ResourceableCategoryAttribute.cs" />
+    <Compile Include="Attributes\ResourceableDescriptionAttribute.cs" />
+    <Compile Include="Base\DoubleDataSourceControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\ColumnItem.cs" />
+    <Compile Include="Base\ColumnItemCollection.cs" />
+    <Compile Include="Base\CursorWaitor.cs" />
+    <Compile Include="Base\DoubleDataSource.cs" />
+    <Compile Include="Base\DialogValueResult.cs" />
+    <Compile Include="Base\IAddRemoveButton.cs" />
+    <Compile Include="Base\ICustomValidation.cs" />
+    <Compile Include="Base\IDataGridView.cs" />
+    <Compile Include="Base\IDoubleDataGrids.cs" />
+    <Compile Include="Base\IFilterableControl.cs" />
+    <Compile Include="Base\IControl.cs" />
+    <Compile Include="Base\IListControlCollection.cs" />
+    <Compile Include="Base\ISearchable.cs" />
+    <Compile Include="Base\ISupportUpdate.cs" />
+    <Compile Include="Base\IWorkingAreaControl.cs" />
+    <Compile Include="Base\TextBoxWriter.cs" />
+    <Compile Include="Base\ToolStripControlHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\WorkingAreaControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataAdapters\CsvReaderAdapter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataAdapters\CsvReaderAdapter.Designer.cs">
+      <DependentUpon>CsvReaderAdapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAdapters\ExcelReaderAdapter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataAdapters\ExcelReaderAdapter.Designer.cs">
+      <DependentUpon>ExcelReaderAdapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAdapters\IDataAdapterControl.cs" />
+    <Compile Include="DataAdapters\SqlReaderAdapter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataAdapters\SqlReaderAdapter.Designer.cs">
+      <DependentUpon>SqlReaderAdapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\DefaultRegexEditor.cs" />
+    <Compile Include="Design\EnumEditorUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\EnumEditorUI.Designer.cs">
+      <DependentUpon>EnumEditorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EnumTypeEditor.cs" />
+    <Compile Include="Design\PropertiesSelectionTypeEditor.cs" />
+    <Compile Include="Design\ValidationEditor.cs" />
+    <Compile Include="Design\WorkingAreaDesigner.cs" />
+    <Compile Include="Dialogs\SqlConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SqlConnectionDialog.Designer.cs">
+      <DependentUpon>SqlConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventArguments\DataGridSelectionChangedEventArgs.cs" />
+    <Compile Include="EventArguments\SearchlEventArgs.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Extensions\ControlPropertyExtensions.cs" />
+    <Compile Include="Extensions\UserControlExtensions.cs" />
+    <Compile Include="Extensions\WindowControlExtension.cs" />
+    <Compile Include="Extensions\WinFormsExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\AddRemoveButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddRemoveButton.designer.cs">
+      <DependentUpon>AddRemoveButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ControlTemplatePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlTemplatePanel.Designer.cs">
+      <DependentUpon>ControlTemplatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewFilter.designer.cs">
+      <DependentUpon>DataGridViewFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewSearch.designer.cs">
+      <DependentUpon>DataGridViewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoubleDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoubleDataGridView.designer.cs">
+      <DependentUpon>DoubleDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FolderBrowserButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\FolderBrowserButton.Designer.cs">
+      <DependentUpon>FolderBrowserButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FileBrowserButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\FileBrowserButton.Designer.cs">
+      <DependentUpon>FileBrowserButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FolderBrowserBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FolderBrowserBar.Designer.cs">
+      <DependentUpon>FolderBrowserBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FileBrowserBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FileBrowserBar.Designer.cs">
+      <DependentUpon>FileBrowserBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataGridViewExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\FilterItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FilterItem.designer.cs">
+      <DependentUpon>FilterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupCheckBox.Designer.cs">
+      <DependentUpon>GroupCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\IDbConnectionControl.cs" />
+    <Compile Include="UserControls\IPathBrowser.cs" />
+    <Compile Include="UserControls\LabelledControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LabelledControl.Designer.cs">
+      <DependentUpon>LabelledControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ListControlCollection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ListControlCollection.designer.cs">
+      <DependentUpon>ListControlCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginBox.designer.cs">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConnectionBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConnectionBuilder.Designer.cs">
+      <DependentUpon>ConnectionBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchTextBox.Designer.cs">
+      <DependentUpon>SearchTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SqlConnectionBuilder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SqlConnectionBuilder.designer.cs">
+      <DependentUpon>SqlConnectionBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConnectionBuilderToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ToolBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ToolBoxControl.Designer.cs">
+      <DependentUpon>ToolBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DataGridViewFilter.cs" />
+    <Compile Include="Utilities\DataGridViewSearchManager.cs" />
+    <Compile Include="Utilities\ISearchManager.cs" />
+    <Compile Include="Utilities\SearchManagerBase.cs" />
+    <Compile Include="Validation\CheckboxCollectionValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\CollectionCountValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\CompareValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\DataTypeValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\IValidation.cs" />
+    <Compile Include="Validation\RangeValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\CustomValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\RegularValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\InExprectedListValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\RequiredValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\BaseValidatior.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Validation\ValidationManager.Designer.cs">
+      <DependentUpon>ValidationManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DataAdapters\CsvReaderAdapter.resx">
+      <DependentUpon>CsvReaderAdapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAdapters\ExcelReaderAdapter.resx">
+      <DependentUpon>ExcelReaderAdapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAdapters\SqlReaderAdapter.resx">
+      <DependentUpon>SqlReaderAdapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EnumEditorUI.resx">
+      <DependentUpon>EnumEditorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SqlConnectionDialog.resx">
+      <DependentUpon>SqlConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\AddRemoveButton.resx">
+      <DependentUpon>AddRemoveButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DataGridViewFilter.resx">
+      <DependentUpon>DataGridViewFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DataGridViewSearch.resx">
+      <DependentUpon>DataGridViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoubleDataGridView.resx">
+      <DependentUpon>DoubleDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FolderBrowserButton.resx">
+      <DependentUpon>FolderBrowserButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FileBrowserButton.resx">
+      <DependentUpon>FileBrowserButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FolderBrowserBar.resx">
+      <DependentUpon>FolderBrowserBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FileBrowserBar.resx">
+      <DependentUpon>FileBrowserBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FilterItem.resx">
+      <DependentUpon>FilterItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupCheckBox.resx">
+      <DependentUpon>GroupCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LabelledControl.resx">
+      <DependentUpon>LabelledControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ListControlCollection.resx">
+      <DependentUpon>ListControlCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LoginBox.resx">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ConnectionBuilder.resx">
+      <DependentUpon>ConnectionBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SearchTextBox.resx">
+      <DependentUpon>SearchTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SqlConnectionBuilder.resx">
+      <DependentUpon>SqlConnectionBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ToolBoxControl.resx">
+      <DependentUpon>ToolBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validation\ValidationManager.resx">
+      <DependentUpon>ValidationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="HBD.WinForms.nuspec" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Validation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\filter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

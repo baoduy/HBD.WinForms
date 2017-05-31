@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.WinForms", "HBD.WinForms\HBD.WinForms.csproj", "{0B8AADA2-3335-49DD-A201-64070AEF75CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.WinForms.TestApp", "HBD.WinForms.TestApp\HBD.WinForms.TestApp.csproj", "{28ED48D3-F5A1-40BA-BB89-8B05834A9823}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F3DE508C-B108-41C0-AAD5-10781E6D996A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B8AADA2-3335-49DD-A201-64070AEF75CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8AADA2-3335-49DD-A201-64070AEF75CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8AADA2-3335-49DD-A201-64070AEF75CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8AADA2-3335-49DD-A201-64070AEF75CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ED48D3-F5A1-40BA-BB89-8B05834A9823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ED48D3-F5A1-40BA-BB89-8B05834A9823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ED48D3-F5A1-40BA-BB89-8B05834A9823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ED48D3-F5A1-40BA-BB89-8B05834A9823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28ED48D3-F5A1-40BA-BB89-8B05834A9823} = {F3DE508C-B108-41C0-AAD5-10781E6D996A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://steven2412.visualstudio.com/
+		SccProjectUniqueName0 = HBD.WinForms.TestApp\\HBD.WinForms.TestApp.csproj
+		SccProjectTopLevelParentUniqueName0 = HBD.WinForms.sln
+		SccProjectName0 = HBD.WinForms.TestApp
+		SccLocalPath0 = HBD.WinForms.TestApp
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = HBD.WinForms\\HBD.WinForms.csproj
+		SccProjectName2 = HBD.WinForms
+		SccLocalPath2 = HBD.WinForms
+	EndGlobalSection
+EndGlobal

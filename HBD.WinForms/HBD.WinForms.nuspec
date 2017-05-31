@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HBD.WinForms</id>
+    <version>${NugetVersion}</version>
+    <title>HBD.WinForms</title>
+    <authors>Duy Hoang</authors>
+    <owners>Duy Hoang</owners>
+    <description>
+      A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.
+    </description>
+    <releaseNotes>
+      Version ${NugetVersion}
+      - Upgrade to HBD.Framework 1.0.12 and the other dependences to latest version.
+      
+      Version 1.0.0
+      - Add new user-controls.
+    </releaseNotes>
+    <summary>
+      A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://nuget.org/packages/HBD.WinForms</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/baoduy/Images/master/NugetLogo.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright 2015</copyright>
+    <dependencies></dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+</package>
